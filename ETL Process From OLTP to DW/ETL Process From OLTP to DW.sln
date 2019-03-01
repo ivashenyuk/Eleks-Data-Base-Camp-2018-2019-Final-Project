@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ETL Process From OLTP to DW", "ETL Process From OLTP to DW\ETL Process From OLTP to DW.dtproj", "{446492EB-F7D6-428F-A278-C1C9E4DD4687}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{446492EB-F7D6-428F-A278-C1C9E4DD4687}.Development|Default.ActiveCfg = Development
+		{446492EB-F7D6-428F-A278-C1C9E4DD4687}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81A3377B-546F-4B0A-8B85-789C97CACAC4}
+	EndGlobalSection
+EndGlobal

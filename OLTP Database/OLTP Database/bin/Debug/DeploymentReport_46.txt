@@ -1,0 +1,20 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Photos].[NameInServerFileSystem] is being dropped, data loss could occur.
+
+** User actions
+     Alter
+       [dbo].[Photos] (Table)
+
+** Supporting actions
+     Refresh
+       [dbo].[UserDelete] (Procedure)
+
+The column [dbo].[Photos].[NameInServerFileSystem] is being dropped, data loss could occur.
+

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>OLTP_Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{2f5dbd9d-4ead-441d-ab8a-d200fb38eb2a}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>OLTP_Database</RootNamespace>
+    <AssemblyName>OLTP_Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Views" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\Stored Procedures\User" />
+    <Folder Include="dbo\Stored Procedures\Team" />
+    <Folder Include="dbo\Stored Procedures\Club" />
+    <Folder Include="dbo\Stored Procedures\Bank" />
+    <Folder Include="dbo\Stored Procedures\Role" />
+    <Folder Include="dbo\Stored Procedures\Location" />
+    <Folder Include="dbo\Stored Procedures\Photo" />
+    <Folder Include="dbo\Stored Procedures\Passport" />
+    <Folder Include="dbo\Triggers" />
+    <Folder Include="dbo\Triggers\Photo" />
+    <Folder Include="dbo\Stored Procedures\BankCard" />
+    <Folder Include="dbo\Stored Procedures\Tournament" />
+    <Folder Include="dbo\Stored Procedures\Sport" />
+    <Folder Include="dbo\Stored Procedures\Match" />
+    <Folder Include="dbo\Stored Procedures\Bet" />
+    <Folder Include="dbo\Stored Procedures\Event" />
+    <Folder Include="dbo\PostScripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Users.sql" />
+    <Build Include="dbo\Tables\Bets.sql" />
+    <Build Include="dbo\Tables\Purses.sql" />
+    <Build Include="dbo\Tables\BankCards.sql" />
+    <Build Include="dbo\Tables\Banks.sql" />
+    <Build Include="dbo\Tables\Locations.sql" />
+    <Build Include="dbo\Tables\Roles.sql" />
+    <Build Include="dbo\Tables\Passports.sql" />
+    <Build Include="dbo\Tables\Photos.sql" />
+    <Build Include="dbo\Tables\Clubs.sql" />
+    <Build Include="dbo\Tables\Teams.sql" />
+    <Build Include="dbo\Tables\Matches.sql" />
+    <Build Include="dbo\Tables\Sports.sql" />
+    <Build Include="dbo\Tables\Tournaments.sql" />
+    <Build Include="dbo\Tables\Transactions.sql" />
+    <Build Include="dbo\Tables\Events.sql" />
+    <Build Include="dbo\Stored Procedures\User\UserDelete.sql" />
+    <Build Include="dbo\Stored Procedures\User\UserRegistration.sql" />
+    <Build Include="dbo\Stored Procedures\User\UserUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Team\TeamAdd.sql" />
+    <Build Include="dbo\Stored Procedures\Team\TeamRemove.sql" />
+    <Build Include="dbo\Stored Procedures\Team\TeamUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Team\TeamGet.sql" />
+    <Build Include="dbo\Stored Procedures\Club\ClubAdd.sql" />
+    <Build Include="dbo\Stored Procedures\Club\ClubGet.sql" />
+    <Build Include="dbo\Stored Procedures\Club\ClubRemove.sql" />
+    <Build Include="dbo\Stored Procedures\Club\ClubUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Bank\BankAdd.sql" />
+    <Build Include="dbo\Stored Procedures\Bank\BankGet.sql" />
+    <Build Include="dbo\Stored Procedures\Bank\BankRemove.sql" />
+    <Build Include="dbo\Stored Procedures\Bank\BankUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Role\RoleAdd.sql" />
+    <Build Include="dbo\Stored Procedures\Role\RoleGet.sql" />
+    <Build Include="dbo\Stored Procedures\Role\RoleRemove.sql" />
+    <Build Include="dbo\Stored Procedures\Role\RoleUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Location\LocationAdd.sql" />
+    <Build Include="dbo\Stored Procedures\Location\LocationGet.sql" />
+    <Build Include="dbo\Stored Procedures\Location\LocationRemove.sql" />
+    <Build Include="dbo\Stored Procedures\Location\LocationUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Photo\PhotoAdd.sql" />
+    <Build Include="dbo\Stored Procedures\Photo\PhotoRemove.sql" />
+    <Build Include="dbo\Stored Procedures\Photo\PhotoGet.sql" />
+    <Build Include="dbo\Stored Procedures\Passport\PassportAdd.sql" />
+    <Build Include="dbo\Stored Procedures\Passport\PassportGet.sql" />
+    <Build Include="dbo\Triggers\Photo\PhotoSetNULLsForParentTable.sql" />
+    <Build Include="dbo\Stored Procedures\Passport\PassportRemove.sql" />
+    <Build Include="dbo\Stored Procedures\Passport\PassportUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Photo\PhotoGetCollectionPathByPassportId.sql" />
+    <Build Include="dbo\Stored Procedures\BankCard\BankCardAdd.sql" />
+    <Build Include="dbo\Stored Procedures\BankCard\BankCardGet.sql" />
+    <Build Include="dbo\Stored Procedures\BankCard\BankCardRemove.sql" />
+    <Build Include="dbo\Stored Procedures\BankCard\BankCardUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Tournament\TournamentAdd.sql" />
+    <Build Include="dbo\Stored Procedures\Tournament\TournamentGet.sql" />
+    <Build Include="dbo\Stored Procedures\Tournament\TournamentRemove.sql" />
+    <Build Include="dbo\Stored Procedures\Tournament\TournamentUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Sport\SportAdd.sql" />
+    <Build Include="dbo\Stored Procedures\Sport\SportGet.sql" />
+    <Build Include="dbo\Stored Procedures\Sport\SportRemove.sql" />
+    <Build Include="dbo\Stored Procedures\Sport\SportUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Match\MatchAdd.sql" />
+    <Build Include="dbo\Stored Procedures\Match\MatchGet.sql" />
+    <Build Include="dbo\Stored Procedures\Match\MatchRemove.sql" />
+    <Build Include="dbo\Stored Procedures\Match\MatchUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Bet\BetGet.sql" />
+    <Build Include="dbo\Stored Procedures\Event\EventGet.sql" />
+    <Build Include="dbo\Tables\StatisticByCardsLastTenMinutes.sql" />
+    <Build Include="dbo\Stored Procedures\Event\EventUpdateValues.sql" />
+    <Build Include="dbo\Tables\UserGroups.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OLTP Database  Google Cloud.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="dbo\PostScripts\GenerateRoles.sql" />
+  </ItemGroup>
+</Project>

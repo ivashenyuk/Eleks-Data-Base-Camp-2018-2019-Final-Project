@@ -1,0 +1,26 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[Users] (Table)
+       [dbo].[UserRegistration] (Procedure)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_Purse_Users_Purses] (Foreign Key)
+       [dbo].[FK_Role_Users_Roles] (Foreign Key)
+     Create
+       [dbo].[FK_Purse_Users_Purses] (Foreign Key)
+       [dbo].[FK_Role_Users_Roles] (Foreign Key)
+
+The column PurseId on table [dbo].[Users] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column RoleId on table [dbo].[Users] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

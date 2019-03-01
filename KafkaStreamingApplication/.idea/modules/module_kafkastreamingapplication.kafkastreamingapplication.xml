@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_kafkastreamingapplication.kafkastreamingapplication" default="compile.module.kafkastreamingapplication.kafkastreamingapplication">
+  <dirname property="module.kafkastreamingapplication.kafkastreamingapplication.basedir" file="${ant.file.module_kafkastreamingapplication.kafkastreamingapplication}"/>
+  
+  <property name="module.jdk.home.kafkastreamingapplication.kafkastreamingapplication" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.kafkastreamingapplication.kafkastreamingapplication" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.kafkastreamingapplication.kafkastreamingapplication" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.kafkastreamingapplication.kafkastreamingapplication" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="kafkastreamingapplication.kafkastreamingapplication.output.dir" value="${module.kafkastreamingapplication.kafkastreamingapplication.basedir}/../../out/production/KafkaStreamingApplication.KafkaStreamingApplication"/>
+  <property name="kafkastreamingapplication.kafkastreamingapplication.testoutput.dir" value="${module.kafkastreamingapplication.kafkastreamingapplication.basedir}/../../out/test/KafkaStreamingApplication.KafkaStreamingApplication"/>
+  
+  <path id="kafkastreamingapplication.kafkastreamingapplication.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="kafkastreamingapplication.kafkastreamingapplication.module.production.classpath">
+    <path refid="${module.jdk.classpath.kafkastreamingapplication.kafkastreamingapplication}"/>
+  </path>
+  
+  <path id="kafkastreamingapplication.kafkastreamingapplication.runtime.production.module.classpath">
+    <pathelement location="${kafkastreamingapplication.kafkastreamingapplication.output.dir}"/>
+  </path>
+  
+  <path id="kafkastreamingapplication.kafkastreamingapplication.module.classpath">
+    <path refid="${module.jdk.classpath.kafkastreamingapplication.kafkastreamingapplication}"/>
+    <pathelement location="${kafkastreamingapplication.kafkastreamingapplication.output.dir}"/>
+  </path>
+  
+  <path id="kafkastreamingapplication.kafkastreamingapplication.runtime.module.classpath">
+    <pathelement location="${kafkastreamingapplication.kafkastreamingapplication.testoutput.dir}"/>
+    <pathelement location="${kafkastreamingapplication.kafkastreamingapplication.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.kafkastreamingapplication.kafkastreamingapplication">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.kafkastreamingapplication.kafkastreamingapplication">
+    <patternset refid="excluded.from.module.kafkastreamingapplication.kafkastreamingapplication"/>
+  </patternset>
+  
+  
+  <target name="compile.module.kafkastreamingapplication.kafkastreamingapplication" depends="compile.module.kafkastreamingapplication.kafkastreamingapplication.production,compile.module.kafkastreamingapplication.kafkastreamingapplication.tests" description="Compile module KafkaStreamingApplication.KafkaStreamingApplication"/>
+  
+  <target name="compile.module.kafkastreamingapplication.kafkastreamingapplication.production" depends="register.custom.compilers" description="Compile module KafkaStreamingApplication.KafkaStreamingApplication; production classes"/>
+  
+  <target name="compile.module.kafkastreamingapplication.kafkastreamingapplication.tests" depends="register.custom.compilers,compile.module.kafkastreamingapplication.kafkastreamingapplication.production" description="compile module KafkaStreamingApplication.KafkaStreamingApplication; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.kafkastreamingapplication.kafkastreamingapplication" description="cleanup module">
+    <delete dir="${kafkastreamingapplication.kafkastreamingapplication.output.dir}"/>
+    <delete dir="${kafkastreamingapplication.kafkastreamingapplication.testoutput.dir}"/>
+  </target>
+</project>

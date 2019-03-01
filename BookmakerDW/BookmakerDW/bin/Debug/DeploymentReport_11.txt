@@ -1,0 +1,44 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[FactFinance]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[FactFinance].[LocationId] on table [dbo].[FactFinance] must be added, but the column has no default
+         value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue
+         you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+       The column [dbo].[FactFinance].[SportId] on table [dbo].[FactFinance] must be added, but the column has no default value
+         and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[FactFinance].[TournamentId] on table [dbo].[FactFinance] must be added, but the column has no default
+         value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue
+         you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+
+** User actions
+     Table rebuild
+       [dbo].[FactFinance] (Table)
+     Create
+       [dbo].[FK_Location_FactFinance_DimLocation] (Foreign Key)
+       [dbo].[FK_Tournament_FactFinance_DimTournament] (Foreign Key)
+       [dbo].[FK_Sport_FactFinance_DimSport] (Foreign Key)
+
+** Supporting actions
+     Drop
+       [dbo].[DF_Created_At_FactFinance] (Default Constraint)
+       [dbo].[FK_Match_FactFinance_Events] (Foreign Key)
+       [dbo].[FK_User_FactFinance_Users] (Foreign Key)
+       [dbo].[FK_Date_FactFinance_DimDate] (Foreign Key)
+     Create
+       [dbo].[FK_Match_FactFinance_Events] (Foreign Key)
+       [dbo].[FK_User_FactFinance_Users] (Foreign Key)
+       [dbo].[FK_Date_FactFinance_DimDate] (Foreign Key)
+
+The column [dbo].[FactFinance].[LocationId] on table [dbo].[FactFinance] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[FactFinance].[SportId] on table [dbo].[FactFinance] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[FactFinance].[TournamentId] on table [dbo].[FactFinance] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

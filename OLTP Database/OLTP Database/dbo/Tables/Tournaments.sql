@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Tournaments]
+(
+	[Id] INT NOT NULL CONSTRAINT PK_Tournaments_Id PRIMARY KEY IDENTITY(1,1)
+	,[Name] NVARCHAR(255) NOT NULL
+	,[OrganizationName] NVARCHAR(255) NULL
+	,[Description] NVARCHAR(800) NULL
+	,[CreatedAt] DATETIME2 NOT NULL CONSTRAINT DF_Created_At_Tournaments DEFAULT GETDATE()
+)

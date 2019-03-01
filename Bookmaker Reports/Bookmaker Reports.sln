@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Bookmaker Reports", "Bookmaker Reports\Bookmaker Reports.rptproj", "{0195E2CA-0F1E-4435-AE21-D64505E3408D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0195E2CA-0F1E-4435-AE21-D64505E3408D}.Debug|Default.ActiveCfg = Debug
+		{0195E2CA-0F1E-4435-AE21-D64505E3408D}.Debug|Default.Build.0 = Debug
+		{0195E2CA-0F1E-4435-AE21-D64505E3408D}.Debug|Default.Deploy.0 = Debug
+		{0195E2CA-0F1E-4435-AE21-D64505E3408D}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{0195E2CA-0F1E-4435-AE21-D64505E3408D}.DebugLocal|Default.Build.0 = DebugLocal
+		{0195E2CA-0F1E-4435-AE21-D64505E3408D}.Release|Default.ActiveCfg = Release
+		{0195E2CA-0F1E-4435-AE21-D64505E3408D}.Release|Default.Build.0 = Release
+		{0195E2CA-0F1E-4435-AE21-D64505E3408D}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F36C9267-36C5-42A3-840A-A5CFF1E9CCB1}
+	EndGlobalSection
+EndGlobal

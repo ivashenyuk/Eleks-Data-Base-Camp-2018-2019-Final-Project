@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BookmakerDW">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=34.73.142.102;Initial Catalog=BookmakerDW</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>e481274d-5bdc-4663-9494-1afba97329fe</DataSourceID>
+</RptDataSource>

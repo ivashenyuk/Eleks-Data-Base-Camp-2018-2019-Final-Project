@@ -1,0 +1,18 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[FactFinance] (Table)
+       [dbo].[StatisticByCards] (Table)
+       [dbo].[DF_Count_StatisticByCards] (Default Constraint)
+       [dbo].[DF_Create_At_StatisticByCards] (Default Constraint)
+
+** Supporting actions

@@ -1,0 +1,27 @@
+{
+   "type":"record",
+   "name":"Event",
+   "namespace":"Entities",
+   "fields":[
+      {
+         "name":"matchId",
+         "type":"int"
+      },
+      {
+         "name":"descriptionEvent",
+         "type":"string"
+      },
+      {
+         "name":"scoreHomeTeam",
+         "type":"int"
+      },
+      {
+         "name":"scoreAwayTeam",
+         "type":"int"
+      },
+      {
+         "name":"timeEvent",
+         "type":"string"
+      }
+   ]
+}

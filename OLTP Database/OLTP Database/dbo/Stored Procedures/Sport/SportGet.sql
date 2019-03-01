@@ -1,0 +1,29 @@
+﻿CREATE PROCEDURE [dbo].[SportGet]
+	@SportId INT = NULL
+AS
+BEGIN
+	SET NOCOUNT ON
+    SET XACT_ABORT ON
+
+	BEGIN TRAN
+		BEGIN TRY
+			IF (@SportId IS NULL)
+			BEGIN
+				SELECT * FROM [dbo].[Sports]
+			END
+			ELSE
+			BEGIN
+				SELECT TOP 1 * FROM [dbo].[Sports] WHERE [Id] = @SportId
+			END
+			COMMIT
+		END TRY
+		BEGIN CATCH
+			IF (@@ERROR <> 0)
+			BEGIN 
+				ROLLBACK
+				;THROW
+			END
+			RETURN NULL
+		END CATCH
+
+END

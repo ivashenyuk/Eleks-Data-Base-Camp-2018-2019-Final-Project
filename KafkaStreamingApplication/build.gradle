@@ -1,0 +1,35 @@
+plugins {
+    id 'scala'
+}
+
+group 'KafkaStreamingApplication'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url "http://packages.confluent.io/maven"
+    }
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.11.12'
+    testImplementation 'org.scalatest:scalatest_2.11:3.0.0'
+    testImplementation 'junit:junit:4.12'
+
+    compile "org.apache.commons:commons-configuration2:2.1.1"
+    compile "org.apache.kafka:kafka-streams:2.1.0"
+//    compile "org.apache.kafka:kafka-clients:2.1.0"
+    compile "com.sksamuel.avro4s:avro4s-core_2.12:2.0.3"
+    compile "io.confluent:kafka-avro-serializer:5.1.0"
+    compile "io.confluent:kafka-streams-avro-serde:5.0.0"
+    compile group: 'net.liftweb', name: 'lift-json_2.12', version: '3.3.0'
+
+
+    // Kafka
+//    compile 'org.apache.kafka:kafka-streams:2.0.0'
+    compile 'io.confluent:kafka-streams-avro-serde:5.0.0'
+}

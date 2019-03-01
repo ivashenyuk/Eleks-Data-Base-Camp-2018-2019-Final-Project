@@ -1,0 +1,5 @@
+E:\Eleks\Final Project\OLTP Database\OLTP Database\bin\Debug\OLTP Database.dacpac
+E:\Eleks\Final Project\OLTP Database\OLTP Database\bin\Debug\OLTP_Database.dll
+E:\Eleks\Final Project\OLTP Database\OLTP Database\bin\Debug\OLTP_Database.pdb
+E:\Eleks\Final Project\OLTP Database\OLTP Database\obj\Debug\OLTP_Database.dll
+E:\Eleks\Final Project\OLTP Database\OLTP Database\obj\Debug\OLTP_Database.pdb

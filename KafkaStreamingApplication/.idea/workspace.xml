@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6e896f91-dfa1-44e9-ac69-d01619ac82ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Configurations/DatabaseConfig.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Configurations/FileStorageProperties.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Configurations/KafkaConfigurations/AbstractClasses/ProducerConfigProps.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Configurations/KafkaConfigurations/Extends/BetProducerConfigProps.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Configurations/KafkaConfigurations/Extends/EventProducerConfigProps.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Configurations/KafkaConfigurations/ProducerConfig.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Configurations/StartConfig.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/BankCardController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/BanksController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/ClubsController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/LocationsController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/MatchesController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/PassportsController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/PhotosController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/RoleController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/SportsController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/TeamsController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/TournamentsController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/DataLakeControllers/UsersController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/KafkaControllers/BetsController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/KafkaControllers/CustomDeserializers/CustomerDateAndTimeDeserialize.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Controllers/KafkaControllers/EventController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Bank.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/BankCard.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Bet.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Club.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Event.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Information.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Location.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/BankCardMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/BankMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/BetMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/ClubMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/EventMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/LocationMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/MatchMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/PassportMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/PhotoMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/RoleMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/SportMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/TeamMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Mappers/TournamentMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Match.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Passport.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Role.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Sport.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Team.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/Tournament.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Entities/User.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Helpers/ClassForReplaceTemp.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Helpers/MD5.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Helpers/MatchStartedException.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Main.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/BankCardImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/BankImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/ClubImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/Kafka/AbstractClasses/ProducerImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/Kafka/Extends/BetImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/Kafka/Extends/EventImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/LocationImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/MatchImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/PassportImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/PhotoImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/RoleImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/SportImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/TeamImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/TournamentImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Implementations/UserImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/BankCardService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/BankService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/BetService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/ClubService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/EventService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/Kafka/BetProducerService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/Kafka/EventProducerService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/Kafka/ProducerService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/LocationService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/MatchService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/PassportService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/PhotoService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/RoleService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/SportService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/TeamService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/TournamentService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackendAPI/src/main/Scala/Services/Traits/UserService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/event-avro-schema.avsc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/player-avro-schema.avsc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Entities/Event.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Entities/Player.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Helpers/PlayerDeserializer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Helpers/PlayerSerde.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Helpers/PlayerSerializer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice16/RestAPIScala/src/main/scala/Main.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice16/RestAPIScala/src/main/scala/ServerRestAPI.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/resources/application-production.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/conrollers/HallController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/conrollers/ScheduleController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/entities/Hall.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/entities/mappers/HallMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/entities/mappers/MovieMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/entities/mappers/ScheduleMapper.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/main/StartConfig.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/repositories/implements/HallRepImplements.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/repositories/implements/MovieRepImplements.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/repositories/implements/ScheduleRepImplements.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/repositories/traits/HallRepository.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/repositories/traits/MovieRepository.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/repositories/traits/ScheduleRepository.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/services/HallService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice18/cinema/src/main/scala/services/ScheduleService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice23/Producer/src/main/resources/Config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice23/ProducerAPI/src/main/resources/static/SchemaRegistry.avsc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice23/ProducerAPI/src/main/scala/Configurations/ProducerConfig.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice23/ProducerAPI/src/main/scala/Configurations/StartConfig.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice23/ProducerAPI/src/main/scala/Controllers/ProducerController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice23/ProducerAPI/src/main/scala/Entities/Information.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice23/ProducerAPI/src/main/scala/MainApplication.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice23/ProducerAPI/src/main/scala/Services/Implementations/ProducerImplementation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice23/ProducerAPI/src/main/scala/Services/Traits/ProducerService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practices/Practice23/Sender Data/src/main/scala/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emails peaple from Eleks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emails peaple from Eleks.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lectures/Lecture 1/Git/sql-server-samples" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lectures/Lecture 1/Git/sql-server-samples" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KafkaStreamingApplication" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KafkaStreamingApplication" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KafkaStreamingApplication" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KafkaStreamingApplication" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KafkaStreamingApplication" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KafkaStreamingApplication" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KafkaStreamingApplication" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KafkaStreamingApplication" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KafkaStreamingApplication" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KafkaStreamingApplication" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+              <folding>
+                <element signature="e#0#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/Entities/Player.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/Entities/Event.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/event-avro-schema.avsc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/player-avro-schema.avsc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&quot; % &quot;</find>
+      <find>,\n</find>
+      <find>&quot;</find>
+      <find>\\</find>
+      <find />
+    </findStrings>
+    <replaceStrings>
+      <replace>:</replace>
+      <replace>,</replace>
+      <replace>\\&quot;</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/scala/Traits/BetSerde.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Helpers/JsonPOJODeserializer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Helpers/JsonPOJOSerializer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Entities/Bet.scala" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/scala/Entities/Bet_old.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Helpers/PlayerSerializer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Helpers/PlayerSerde.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Helpers/PlayerDeserializer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Entities/Player_old.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Entities/Event_old.scala" />
+        <option value="$PROJECT_DIR$/src/main/resources/player-avro-schema.avsc" />
+        <option value="$PROJECT_DIR$/src/main/scala/Entities/Player.scala" />
+        <option value="$PROJECT_DIR$/src/main/resources/event-avro-schema.avsc" />
+        <option value="$PROJECT_DIR$/src/main/scala/Entities/Event.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Main.scala" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="923" />
+    <option name="y" value="116" />
+    <option name="width" value="964" />
+    <option name="height" value="711" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="KafkaStreamingApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KafkaStreamingApplication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="KafkaStreamingApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KafkaStreamingApplication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KafkaStreamingApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KafkaStreamingApplication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="KafkaStreamingApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KafkaStreamingApplication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KafkaStreamingApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KafkaStreamingApplication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KafkaStreamingApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KafkaStreamingApplication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="Entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KafkaStreamingApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KafkaStreamingApplication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="Helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="kafkastreamingapplication" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mssql-jdbc-7.2.1.jre8.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.56953055" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Entities" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/scala" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="KafkaStreamingApplication.KafkaStreamingApplication.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaStreamingApplication [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assemble" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="KafkaStreamingApplication [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="KafkaStreamingApplication [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="KafkaStreamingApplication [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.KafkaStreamingApplication [clean]" />
+        <item itemvalue="Gradle.KafkaStreamingApplication [jar]" />
+        <item itemvalue="Gradle.KafkaStreamingApplication [build]" />
+        <item itemvalue="Gradle.KafkaStreamingApplication [assemble]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Downloads/akka-quickstart-scala" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e896f91-dfa1-44e9-ac69-d01619ac82ab" name="Default Changelist" comment="" />
+      <created>1550048505419</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550048505419</updated>
+      <workItem from="1550048522881" duration="10006000" />
+      <workItem from="1550151089558" duration="739000" />
+      <workItem from="1550220101026" duration="7995000" />
+      <workItem from="1550597422431" duration="14941000" />
+      <workItem from="1550666017955" duration="10299000" />
+      <workItem from="1550744621614" duration="9910000" />
+      <workItem from="1550770846885" duration="1913000" />
+      <workItem from="1550774346644" duration="45494000" />
+      <workItem from="1551020262912" duration="5531000" />
+      <workItem from="1551186773604" duration="13688000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="120516000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="950" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27670172" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3459196" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.29157668" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32886723" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32886723" />
+      <window_info anchor="bottom" id="Build" order="12" weight="0.33008525" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32886723" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.22080797" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32982844" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27006087" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4323995" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.29157668" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32886723" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32886723" />
+      <window_info anchor="bottom" id="Build" order="12" weight="0.33008525" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32886723" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+    </layout-to-restore>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.12.7/c57db2043a23e468ce9ae27e764c8dd8c0ad88c8/scala-library-2.12.7-sources.jar!/scala/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Traits/BetSerde.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Helpers/JsonPOJODeserializer.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Helpers/JsonPOJOSerializer.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Entities/Bet.scala" />
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding>
+            <element signature="e#10065#10066#0" expanded="true" />
+            <element signature="e#10148#10149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.confluent/kafka-schema-registry-client/5.1.0/9903f72bb17388227776994270a656ec7e43686e/kafka-schema-registry-client-5.1.0.jar!/io/confluent/kafka/schemaregistry/client/SchemaRegistryClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Entities/Bet_old.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Helpers/PlayerSerde.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="35" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Helpers/PlayerDeserializer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="45" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Entities/Player_old.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Entities/Event_old.scala" />
+    <entry file="file://$PROJECT_DIR$/out/production/classes/Entities/Player.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/classes/Entities/Event.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Helpers/PlayerSerializer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="14" column="53" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/resources/main/event-avro-schema.avsc" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Entities/Event.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/event-avro-schema.avsc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/player-avro-schema.avsc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Entities/Player.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="gradleExecuteTaskHistory">
+    <option value="" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>mssql-jdbc-7.2.1.jre8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.56953055" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>KafkaStreamingApplication.KafkaStreamingApplication</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>mssql-jdbc-7.2.1.jre8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.56953055" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

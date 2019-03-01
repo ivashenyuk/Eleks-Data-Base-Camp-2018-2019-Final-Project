@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[BankCards]
+(
+	[Id] INT NOT NULL CONSTRAINT PK_Bank_Card_Id PRIMARY KEY IDENTITY(1,1)
+	,[BankId] INT NOT NULL CONSTRAINT FK_Bank_Id_BankCards_Users FOREIGN KEY REFERENCES [dbo].[Banks]([Id])
+	,[CardNumber] VARCHAR(16) NOT NULL
+	,[ExpiryDateCard] DATE NOT NULL
+	,[DigitsOnBackOfCard] TINYINT NOT NULL
+	,[IsConfirmedCard] BIT NULL
+	,[CreatedAt] DATETIME2 NOT NULL CONSTRAINT DF_Created_At_BankCards DEFAULT GETDATE()
+)

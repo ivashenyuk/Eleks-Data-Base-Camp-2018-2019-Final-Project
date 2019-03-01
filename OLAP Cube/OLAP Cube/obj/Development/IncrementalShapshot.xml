@@ -1,0 +1,110 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>OLAP Cube</Database>
+    <Server>34.73.142.102</Server>
+    <ConnectionString>Data Source=34.73.142.102;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>OxHlYeZph+OLJaX8SLRV3ukgV+c=2019-02-26 11:53:25 PM2019-02-26 8:08:58 PM</TimeStamp>
+        <ID>
+          <String>Bookmaker DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>mCNF4nAE7vUJEY0KLGzRaKL9tfI=2019-02-26 8:09:18 PM2019-02-26 8:09:15 PM</TimeStamp>
+        <ID>
+          <String>Bookmaker DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>FDIqlGW/coIbAx3bHi0wiBkDWa4=2019-02-26 8:12:41 PM2019-02-26 8:12:41 PM</TimeStamp>
+        <ID>
+          <String>Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ZmZKo5BeViVA4FdJFQxKr4hf000=2019-02-26 8:20:28 PM2019-02-26 8:14:18 PM</TimeStamp>
+        <ID>
+          <String>Location</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>5Yk89pv7NE0ZyVe5krUCukv/phY=2019-02-26 8:14:46 PM2019-02-26 8:14:46 PM</TimeStamp>
+        <ID>
+          <String>Match</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>e7A1amVPBtCBt2DQRWA38K3oeQw=2019-02-26 8:15:12 PM2019-02-26 8:15:12 PM</TimeStamp>
+        <ID>
+          <String>Sport</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>5jQL5ztgtemQ1QT3ivtVYYtMpHc=2019-02-26 11:49:38 PM2019-02-26 8:15:31 PM</TimeStamp>
+        <ID>
+          <String>Tournament</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>BlVzB3JVcbq8UwctMb3xQmx4MuI=2019-02-26 8:16:00 PM2019-02-26 8:16:00 PM</TimeStamp>
+        <ID>
+          <String>User</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>DYnavnUNyNdF3WWgl0deGlFOs+8=2019-02-26 8:16:16 PM2019-02-26 8:16:16 PM</TimeStamp>
+        <ID>
+          <String>User Group</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>UNirnEQABqXQUCUzvVCARX+0aQA=2019-02-26 11:51:50 PM2019-02-26 11:51:49 PM</TimeStamp>
+        <ID>
+          <String>Finance</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>+SfsGmhtmTVkiKGrsMC4ppS/QFk=2019-02-26 11:54:30 PM2019-02-26 11:54:30 PMpE/W0i0vT5Cb+nglSKXNb6WrtmM=2019-02-26 11:54:30 PM2019-02-26 11:54:30 PM</TimeStamp>
+        <ID>
+          <String>Bookmaker Finance</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>aD3WMTfLB/fhgb1f7UgJ1a+8Gmo=2019-02-26 8:07:25 PM2019-02-26 8:07:24 PM</TimeStamp>
+      <ID>
+        <String>OLAP Cube</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-02-27T10:22:52.716667Z</LastDeployed>
+</DeploymentSnapshot>

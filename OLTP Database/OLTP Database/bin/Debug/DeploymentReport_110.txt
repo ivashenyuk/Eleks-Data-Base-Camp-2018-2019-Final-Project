@@ -1,0 +1,41 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Matches]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Matches] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[DF_Is_Started_Matches] (Default Constraint)
+       [dbo].[DF_ScoreHomeTeam_Matches] (Default Constraint)
+       [dbo].[DF_ScoreAwayTeam_Matches] (Default Constraint)
+       [dbo].[DF_Created_At_Matches] (Default Constraint)
+       [dbo].[FK_Match_Id_Events_Matches] (Foreign Key)
+       [dbo].[FK_Home_Team_Id_Matches_Teams] (Foreign Key)
+       [dbo].[FK_Away_Team_Id_Matches_Teams] (Foreign Key)
+       [dbo].[FK_Manager_Id_Matches_Users] (Foreign Key)
+       [dbo].[FK_Location_Id_Matches_Locations] (Foreign Key)
+       [dbo].[FK_Sport_Id_Matches_Sports] (Foreign Key)
+       [dbo].[FK_Tournament_Id_Matches_Tournaments] (Foreign Key)
+     Create
+       [dbo].[FK_Match_Id_Events_Matches] (Foreign Key)
+       [dbo].[FK_Home_Team_Id_Matches_Teams] (Foreign Key)
+       [dbo].[FK_Away_Team_Id_Matches_Teams] (Foreign Key)
+       [dbo].[FK_Manager_Id_Matches_Users] (Foreign Key)
+       [dbo].[FK_Location_Id_Matches_Locations] (Foreign Key)
+       [dbo].[FK_Sport_Id_Matches_Sports] (Foreign Key)
+       [dbo].[FK_Tournament_Id_Matches_Tournaments] (Foreign Key)
+     Refresh
+       [dbo].[EventUpdateValues] (Procedure)
+       [dbo].[MatchAdd] (Procedure)
+       [dbo].[MatchGet] (Procedure)
+       [dbo].[MatchRemove] (Procedure)
+       [dbo].[MatchUpdate] (Procedure)

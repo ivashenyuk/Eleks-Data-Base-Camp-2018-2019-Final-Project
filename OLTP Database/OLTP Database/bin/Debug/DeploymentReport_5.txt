@@ -1,0 +1,27 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[Passports] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_Photo_ID_Owner_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Owner_With_Passport_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_1_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_2_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_Registration_Passports_Photos] (Foreign Key)
+     Create
+       [dbo].[FK_Photo_ID_Owner_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Owner_With_Passport_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_1_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_2_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_Registration_Passports_Photos] (Foreign Key)

@@ -1,0 +1,27 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Events]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Events].[Time] is being dropped, data loss could occur.
+
+** User actions
+     Table rebuild
+       [dbo].[Events] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[DF_Created_At_Events] (Default Constraint)
+       [dbo].[FK_Match_Bets_Events] (Foreign Key)
+       [dbo].[FK_Match_Id_Events_Matches] (Foreign Key)
+     Create
+       [dbo].[FK_Match_Bets_Events] (Foreign Key)
+       [dbo].[FK_Match_Id_Events_Matches] (Foreign Key)
+     Refresh
+       [dbo].[EventGet] (Procedure)
+
+The column [dbo].[Events].[Time] is being dropped, data loss could occur.
+

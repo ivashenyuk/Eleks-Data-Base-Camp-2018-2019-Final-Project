@@ -1,0 +1,11 @@
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\obj\Debug\GenerateFilesWithData.csprojAssemblyReference.cache
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\obj\Debug\GenerateFilesWithData.csproj.CoreCompileInputs.cache
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\bin\Debug\GenerateFilesWithData.exe.config
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\bin\Debug\GenerateFilesWithData.exe
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\bin\Debug\GenerateFilesWithData.pdb
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\obj\Debug\GenerateFilesWithData.exe
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\obj\Debug\GenerateFilesWithData.pdb
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\bin\Debug\Newtonsoft.Json.dll
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\bin\Debug\Newtonsoft.Json.pdb
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\bin\Debug\Newtonsoft.Json.xml
+E:\Eleks\Final Project\GenerateFilesWithData\GenerateFilesWithData\obj\Debug\GenerateFilesWithData.csproj.CopyComplete

@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Banks]
+(
+	[Id] INT NOT NULL CONSTRAINT PK_Bank_Id PRIMARY KEY IDENTITY(1,1)
+	,[Name] NVARCHAR(255) NOT NULL
+	,[MinMoneyToWithdraw] MONEY NULL
+	,[Commission] FLOAT NOT NULL
+	,[TimeOfProcessing] BIGINT NOT NULL
+	,[Description] NVARCHAR(500) NULL
+	,[CreatedAt] DATETIME2 NOT NULL CONSTRAINT DF_Created_At_Banks DEFAULT GETDATE()
+)

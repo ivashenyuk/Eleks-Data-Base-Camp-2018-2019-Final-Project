@@ -1,0 +1,42 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[DimDate] (Table)
+       [dbo].[DimLocation] (Table)
+       [dbo].[DimMatch] (Table)
+       [dbo].[DimSport] (Table)
+       [dbo].[DimTournament] (Table)
+       [dbo].[DimUser] (Table)
+       [dbo].[DimUserGroup] (Table)
+       [dbo].[FactFinance] (Table)
+       [dbo].[StatisticByCards] (Table)
+       [dbo].[DF_Created_At_DimLocation] (Default Constraint)
+       [dbo].[DF_Is_Started_DimMatch] (Default Constraint)
+       [dbo].[DF_Is_Ended_DimMatch] (Default Constraint)
+       [dbo].[DF_ScoreHomeTeam_DimMatch] (Default Constraint)
+       [dbo].[DF_ScoreAwayTeam_DimMatch] (Default Constraint)
+       [dbo].[DF_Created_At_DimSport] (Default Constraint)
+       [dbo].[DF_Created_At_DimTournament] (Default Constraint)
+       [dbo].[DF_Created_At_DimUserGroups] (Default Constraint)
+       [dbo].[DF_Created_At_FactFinance] (Default Constraint)
+       [dbo].[DF_Count_StatisticByCards] (Default Constraint)
+       [dbo].[DF_Create_At_StatisticByCards] (Default Constraint)
+       [dbo].[FK_Match_FactFinance_DimMatch] (Foreign Key)
+       [dbo].[FK_User_FactFinance_DimUser] (Foreign Key)
+       [dbo].[FK_Date_FactFinance_DimDate] (Foreign Key)
+       [dbo].[FK_Location_FactFinance_DimLocation] (Foreign Key)
+       [dbo].[FK_Tournament_FactFinance_DimTournament] (Foreign Key)
+       [dbo].[FK_Sport_FactFinance_DimSport] (Foreign Key)
+       [dbo].[CK_User_Age_DimUser] (Check Constraint)
+       [dbo].[FillDimDate] (Procedure)
+
+** Supporting actions

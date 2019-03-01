@@ -1,0 +1,120 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[BankCards].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[BankCards].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Banks].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Banks].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Bets].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Bets].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Clubs].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Clubs].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Events].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Events].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Locations].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Locations].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Matches].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Matches].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Organizations].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Organizations].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Passports].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Passports].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Photos].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Photos].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Purses].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Purses].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Roles].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Roles].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Sports].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Sports].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Teams].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Teams].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Tournaments].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Tournaments].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Transactions].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Transactions].[UpdatedAt] is being dropped, data loss could occur.
+       The column [dbo].[Users].[LastEditedById] is being dropped, data loss could occur.
+       The column [dbo].[Users].[UpdatedAt] is being dropped, data loss could occur.
+
+** User actions
+     Drop
+       [dbo].[FK_Last_Edited_By_BankCards_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Banks_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Bets_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Clubs_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Events_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Locations_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Matches_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Organizations_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Passports_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Photos_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Purses_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Roles_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Sports_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Teams_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Tournaments_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Transactions_Users] (Foreign Key)
+       [dbo].[FK_Last_Edited_By_Users_Users] (Foreign Key)
+     Alter
+       [dbo].[BankCards] (Table)
+       [dbo].[Banks] (Table)
+       [dbo].[Bets] (Table)
+       [dbo].[Clubs] (Table)
+       [dbo].[Events] (Table)
+       [dbo].[Locations] (Table)
+       [dbo].[Matches] (Table)
+       [dbo].[Organizations] (Table)
+       [dbo].[Passports] (Table)
+       [dbo].[Photos] (Table)
+       [dbo].[Purses] (Table)
+       [dbo].[Roles] (Table)
+       [dbo].[Sports] (Table)
+       [dbo].[Teams] (Table)
+       [dbo].[Tournaments] (Table)
+       [dbo].[Transactions] (Table)
+       [dbo].[Users] (Table)
+     Create
+       [dbo].[UserRegistration] (Procedure)
+
+** Supporting actions
+
+The column [dbo].[BankCards].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[BankCards].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Banks].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Banks].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Bets].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Bets].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Clubs].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Clubs].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Events].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Events].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Locations].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Locations].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Matches].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Matches].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Organizations].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Organizations].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Passports].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Passports].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Photos].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Photos].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Purses].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Purses].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Roles].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Roles].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Sports].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Sports].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Teams].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Teams].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Tournaments].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Tournaments].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Transactions].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Transactions].[UpdatedAt] is being dropped, data loss could occur.
+The column [dbo].[Users].[LastEditedById] is being dropped, data loss could occur.
+The column [dbo].[Users].[UpdatedAt] is being dropped, data loss could occur.
+

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="34.73.142.102.BookmakerDW.sa"
+  DTS:DTSID="{4768B464-F551-48F7-A398-A41CC3F588B5}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=34.73.142.102;User ID=sa;Initial Catalog=BookmakerDW;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAABl96vVM440i2p3QGaz4Y+QAAAAACAAAAAAAQZgAAAAEAACAAAACJb3ZZ7N2hLxisSw6OIXuQP6b1myha40MasdMHkEtqoQAAAAAOgAAAAAIAACAAAADA5lc4dkY0jVOiZyoRcg5HJ7soPW8FeOuxsInfNRCAVIAAAADSejeUX0DF7iJ+T7cKDEFonpyl4Le7Kq414Jrp1pVcXKDVsjvxHNwgXUfxw4DTg4MxluG5VX9rug0xv81bwM/KMB6bfs1GdWylSo6jR03wNmUOF0w069txVBRsrcdTcUs6ElTqe+MgBL4YEbV7UPL86NgLNspHM4wSlDCZSZtQHkAAAAAE8U8Q8NRKunOBBaCXjsAux4lTyulSLw/IK6wt5+Kg63fxQ90uQ7M2+VA5qByOA2POYKK8Hl+nr4Gu2Oc53CuR</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

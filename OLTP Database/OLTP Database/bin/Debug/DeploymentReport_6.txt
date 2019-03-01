@@ -1,0 +1,40 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Passports]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Passports].[Name] is being dropped, data loss could occur.
+       The column [dbo].[Passports].[FirstName] on table [dbo].[Passports] must be added, but the column has no default value
+         and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+
+** User actions
+     Table rebuild
+       [dbo].[Passports] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[DF_Created_At_Passports] (Default Constraint)
+       [dbo].[FK_Last_Edited_By_Passports_Users] (Foreign Key)
+       [dbo].[FK_Photo_ID_Owner_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Owner_With_Passport_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_1_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_2_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_Registration_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Passport_Users_Passports] (Foreign Key)
+     Create
+       [dbo].[FK_Last_Edited_By_Passports_Users] (Foreign Key)
+       [dbo].[FK_Photo_ID_Owner_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Owner_With_Passport_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_1_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_2_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Photo_Page_Registration_Passports_Photos] (Foreign Key)
+       [dbo].[FK_Passport_Users_Passports] (Foreign Key)
+
+The column [dbo].[Passports].[Name] is being dropped, data loss could occur.
+The column [dbo].[Passports].[FirstName] on table [dbo].[Passports] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

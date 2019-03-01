@@ -1,0 +1,2887 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/24/2019 8:06:46 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="IVASHENYUK"
+  DTS:CreatorName="IVASHENYUK\yurai"
+  DTS:DTSID="{B3E95A92-2778-4E49-A710-30CD226D8B66}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.40"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{EC0DFB52-CB1A-49B2-AD8A-5B160A78BF2D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[34.73.86.174.BookmakerOLTP.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8C3BB5D7-A6E7-485D-9905-51CDDB3DF7FE}"
+      DTS:ObjectName="34.73.86.174.BookmakerOLTP.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=34.73.86.174;User ID=sa;Initial Catalog=BookmakerOLTP;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAABl96vVM440i2p3QGaz4Y+QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABLUSjoMsiOnOQxxm25rI34jiTiZ1ttuUkrjC6io5UGeQAAAAAOgAAAAAIAACAAAAAkBHS1ivA5r13x2Oox7psVCyFFEAKVWMU/unObbFF2QSAAAABZjLNK6jBMn1ripKXnYqgB3etJzjZiwKFet7nbZ0mtIUAAAABROUcZjMGpcqI1HAUGgvG7Sl2mctI63f0iB49zINlK5kC/IFsWijoxBSj16rY/2/aRTZchuPpeBVTtPlvEW22r</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{99FDDA56-3866-4B48-A802-19744F056AA9}"
+      DTS:ObjectName="csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\dataMatches.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{8389D3E6-8A79-4DDB-B368-B405D31F40C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HomeTeamId"
+              DTS:DTSID="{5CE73C0A-F7F2-4C5B-86E0-777B7DB122D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AwayTeamId"
+              DTS:DTSID="{D2B1CA5B-528B-4399-99B1-ECB080AFB44F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ManagerId"
+              DTS:DTSID="{900C7284-31F7-4077-9F24-5446F3B0DCEB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LocationId"
+              DTS:DTSID="{330817B9-BCE5-409F-B47F-B99507C54823}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SportId"
+              DTS:DTSID="{FFA0F5B8-37FB-42A0-B521-0684B3ED8355}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TournamentId"
+              DTS:DTSID="{51B10CE7-F4B6-4CB1-9177-1B240DD307A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IsStarted"
+              DTS:DTSID="{5DBC8D42-28ED-4586-876E-18EA6984E8CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ScoreHomeTeam"
+              DTS:DTSID="{09334812-1C4C-44F8-9ABC-0BEA1A20A1A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ScoreAwayTeam"
+              DTS:DTSID="{AC9C936D-6247-4592-9EBB-487832D01BEB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{2C07432C-BA54-4AB6-8BBA-019C1EAE78D2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[dataMatches.json]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{2EB7A19B-DA53-4592-A343-8EEED0C81A5D}"
+      DTS:ObjectName="dataMatches.json">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="E:\dataMatches.json" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2F18A8A6-76D5-45D4-8A5F-C7D546542C5B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LastIdCsv">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6671E079-566F-4D02-B877-5093084FBE27}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LastIdJson">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{EF5C7239-A53E-4613-A8F4-9095DC7EEBE1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Conditional Split WHERE id new CSV"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split WHERE id new CSV"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Inputs[Conditional Split Input].Columns[Id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Id"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(DT_UI4)#{Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[Id]} &gt; (DT_UI4)@[User::LastIdCsv]</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(DT_UI4)Id &gt; (DT_UI4)@[User::LastIdCsv]</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Conditional Split WHERE id new JSON"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split WHERE id new JSON"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Inputs[Conditional Split Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(DT_UI4)#{Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[Id]} &gt; (DT_UI4)@[User::LastIdJson]</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(DT_UI4)Id &gt; (DT_UI4)@[User::LastIdJson]</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Matches From CSV"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Matches From CSV"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Matches From CSV.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[Id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[Id]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[HomeTeamId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[HomeTeamId]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[HomeTeamId]"
+                      name="HomeTeamId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[AwayTeamId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[AwayTeamId]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[AwayTeamId]"
+                      name="AwayTeamId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[ManagerId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[ManagerId]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[ManagerId]"
+                      name="ManagerId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[LocationId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[LocationId]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[LocationId]"
+                      name="LocationId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[SportId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[SportId]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[SportId]"
+                      name="SportId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[TournamentId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[TournamentId]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[TournamentId]"
+                      name="TournamentId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[IsStarted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[IsStarted]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[IsStarted]"
+                      name="IsStarted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[ScoreHomeTeam]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[ScoreHomeTeam]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[ScoreHomeTeam]"
+                      name="ScoreHomeTeam"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[ScoreAwayTeam]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[ScoreAwayTeam]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[ScoreAwayTeam]"
+                      name="ScoreAwayTeam"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[Id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[HomeTeamId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="HomeTeamId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[AwayTeamId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AwayTeamId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[ManagerId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ManagerId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[LocationId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LocationId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[SportId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SportId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[TournamentId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TournamentId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[IsStarted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IsStarted" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[ScoreHomeTeam]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ScoreHomeTeam" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[ScoreAwayTeam]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ScoreAwayTeam" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Matches From JSON"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;11"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Matches From JSON"
+              version="11">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="36">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public Output0Buffer Output0Buffer;
+
+    public virtual void FinishOutputs()
+    {
+    }
+
+    private void MarkOutputsFinished()
+    {
+
+        if (null != Output0Buffer)
+        {
+            Output0Buffer.SetEndOfRowset();
+            Output0Buffer = null;
+        }
+
+    }
+
+    public override void PrimeOutput(int Outputs, int[] OutputIDs, PipelineBuffer[] Buffers, OutputNameMap OutputMap)
+    {
+       for(int Idx = 0; Idx < Outputs; Idx++)
+       {
+            if(OutputIDs[Idx] == GetOutputID(OutputMap, @"Output 0"))
+            {
+                Output0Buffer = new Output0Buffer(Buffers[Idx], GetColumnIndexes(OutputIDs[Idx]), OutputMap);
+            }
+        }
+
+        CreateNewOutputRows();
+
+        FinishOutputs();
+        MarkOutputsFinished();
+
+    }
+
+    public virtual void CreateNewOutputRows()
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+    public IDTSConnectionManager100 Connection
+    {
+        get
+        {
+            return ParentComponent.ComponentMetaData.RuntimeConnectionCollection.GetRuntimeConnectionByName(@"Connection").ConnectionManager;
+        }
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Web.Script.Serialization;
+using System.Windows.Forms;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+using SC_8a47c5c4f5c740d5a7d50b4f0955d6ee;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    public override void CreateNewOutputRows()
+    {
+        /*
+          Add rows by calling the AddRow method on the member variable named "<Output Name>Buffer".
+          For example, call MyOutputBuffer.AddRow() if your output was named "MyOutput".
+        */
+        var jsonFilePath = this.Connections.Connection.ConnectionString;
+       
+        var jsonData = File.ReadAllText(jsonFilePath);
+        JavaScriptSerializer js = new JavaScriptSerializer();
+        var matches = js.Deserialize<List<Match>>(jsonData)
+              ?? new List<Match>();
+
+        foreach (var match in matches)
+        {
+            Output0Buffer.AddRow();
+            Output0Buffer.Id = match.Id;
+            Output0Buffer.HomeTeamId = match.HomeTeamId;
+            Output0Buffer.AwayTeamId = match.AwayTeamId;
+            Output0Buffer.LocationId = match.LocationId;
+            Output0Buffer.ManagerId = match.ManagerId;
+            Output0Buffer.SportId = match.SportId;
+            Output0Buffer.TournamentId = match.TournamentId;
+            Output0Buffer.IsStarted = match.IsStarted;
+            Output0Buffer.ScoreAwayTeam = match.ScoreAwayTeam;
+            Output0Buffer.ScoreHomeTeam = match.HomeTeamId;
+            Output0Buffer.Date = match.Date;
+        }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Output0Buffer: ScriptBuffer
+
+{
+    public Output0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public DateTime Date
+    {
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool Date_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 ScoreAwayTeam
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool ScoreAwayTeam_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 ScoreHomeTeam
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool ScoreHomeTeam_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Boolean IsStarted
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool IsStarted_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 TournamentId
+    {
+        set
+        {
+            this[4] = value;
+        }
+    }
+    public bool TournamentId_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(4);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 SportId
+    {
+        set
+        {
+            this[5] = value;
+        }
+    }
+    public bool SportId_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(5);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 LocationId
+    {
+        set
+        {
+            this[6] = value;
+        }
+    }
+    public bool LocationId_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(6);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 ManagerId
+    {
+        set
+        {
+            this[7] = value;
+        }
+    }
+    public bool ManagerId_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(7);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 AwayTeamId
+    {
+        set
+        {
+            this[8] = value;
+        }
+    }
+    public bool AwayTeamId_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(8);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 HomeTeamId
+    {
+        set
+        {
+            this[9] = value;
+        }
+    }
+    public bool HomeTeamId_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(9);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 Id
+    {
+        set
+        {
+            this[10] = value;
+        }
+    }
+    public bool Id_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(10);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public void AddRow()
+    {
+        base.AddRow();
+    }
+
+    new public void SetEndOfRowset()
+    {
+        base.SetEndOfRowset();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.Properties.Settings.get_Default():SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.Properties.Sett" +
+    "ings")]
+
+namespace SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7EB74ED-DB9B-44DC-94DE-98B738645E76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_8a47c5c4f5c740d5a7d50b4f0955d6ee</RootNamespace>
+    <AssemblyName>SC_8a47c5c4f5c740d5a7d50b4f0955d6ee</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>C:\Users\yurai\AppData\Local\Temp\Vsta\SSIS_SC140\VstaYkzwN_DwsEGe1Crvam3__LQ\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Match.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC140</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Match.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_8a47c5c4f5c740d5a7d50b4f0955d6ee
+{
+    class Match
+    {
+        public int Id { get; set; }
+        public int HomeTeamId { get; set; }
+        public int AwayTeamId { get; set; }
+        public int ManagerId { get; set; }
+        public int LocationId { get; set; }
+        public int SportId { get; set; }
+        public int TournamentId { get; set; }
+        public bool IsStarted { get; set; }
+        public int ScoreHomeTeam { get; set; }
+        public int ScoreAwayTeam { get; set; }
+        public DateTime Date { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[packages.config]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<packages>
+  <package id="Newtonsoft.Json" version="12.0.1" targetFramework="net45" />
+</packages>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_8a47c5c4f5c740d5a7d50b4f0955d6ee</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_8a47c5c4f5c740d5a7d50b4f0955d6ee</msb:DisplayName>
+    <msb:ProjectId>{28CE5029-C437-453F-994E-802883BF318E}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.csproj" />
+    <msb:File Include="packages.config" />
+    <msb:File Include="Match.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_8a47c5c4f5c740d5a7d50b4f0955d6ee")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_8a47c5c4f5c740d5a7d50b4f0955d6ee")]
+[assembly: AssemblyCopyright("Copyright @  2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_8a47c5c4f5c740d5a7d50b4f0955d6ee.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAK+kc1wAAAAAAAAAAOAAIiALATAAACIAAAAIAAAAAAAA+kEA
+AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACgAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKhBAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAACIAAAAgAAAAIgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAYAAAAAYAAAAkAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAIAAAAACAAAAKgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADc
+QQAAAAAAAEgAAAACAAUAXCUAAJQbAAABAAAAAAAAAPBAAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACiobMAIAIAEAAAEAABECewEAAARv
+JQAABm8SAAAKKBMAAAoKcxQAAAoGbwEAACslLQYmcxYAAApvFwAACgs4zgAAABIBKBgAAAoMAnsD
+AAAEbxwAAAYCewMAAAQIbycAAAZvGgAABgJ7AwAABAhvKQAABm8YAAAGAnsDAAAECG8rAAAGbxYA
+AAYCewMAAAQIby8AAAZvEgAABgJ7AwAABAhvLQAABm8UAAAGAnsDAAAECG8xAAAGbxAAAAYCewMA
+AAQIbzMAAAZvDgAABgJ7AwAABAhvNQAABm8MAAAGAnsDAAAECG85AAAGbwgAAAYCewMAAAQIbykA
+AAZvCgAABgJ7AwAABAhvOwAABm8GAAAGEgEoGQAACjom////3g4SAf4WAgAAG28aAAAK3CoBEAAA
+AgAwAOERAQ4AAAAAHgIoHwAABioqAgMEBSgbAAAKKjoCFgOMEwAAASgcAAAKKloDLAgCFigdAAAK
+KnIBAABwcx4AAAp6OgIXA4wiAAABKBwAAAoqWgMsCAIXKB0AAAoqcgEAAHBzHgAACno6AhgDjCIA
+AAEoHAAACipaAywIAhgoHQAACipyAQAAcHMeAAAKejoCGQOMIwAAASgcAAAKKloDLAgCGSgdAAAK
+KnIBAABwcx4AAAp6OgIaA4wiAAABKBwAAAoqWgMsCAIaKB0AAAoqcgEAAHBzHgAACno6AhsDjCIA
+AAEoHAAACipaAywIAhsoHQAACipyAQAAcHMeAAAKejoCHAOMIgAAASgcAAAKKloDLAgCHCgdAAAK
+KnIBAABwcx4AAAp6OgIdA4wiAAABKBwAAAoqWgMsCAIdKB0AAAoqcgEAAHBzHgAACno6Ah4DjCIA
+AAEoHAAACipaAywIAh4oHQAACipyAQAAcHMeAAAKej4CHwkDjCIAAAEoHAAACipeAywJAh8JKB0A
+AAoqcgEAAHBzHgAACno+Ah8KA4wiAAABKBwAAAoqXgMsCQIfCigdAAAKKnIBAABwcx4AAAp6HgIo
+HwAACioeAiggAAAKKh4CKCEAAAoqfgIoIgAACgICcyQAAAZ9AQAABAICcyYAAAZ9AgAABCoGKm4C
+ewMAAAQsEgJ7AwAABG8dAAAGAhR9AwAABCoAEzAFAEkAAAACAAARFgorLgQGlA4Ecp4AAHAoIwAA
+CjMZAgUGmgIEBpQoJAAACg4EcwUAAAZ9AwAABAYXWAoGAzLOAm8jAAAGAm8gAAAGAighAAAGKjoC
+KCUAAAoCA30EAAAEKoICewQAAARvJgAACm8nAAAKcrAAAHBvKAAACm8pAAAKKjoCKCUAAAoCA30F
+AAAEKh4CewYAAAQqIgIDfQYAAAQqHgJ7BwAABCoiAgN9BwAABCoeAnsIAAAEKiICA30IAAAEKh4C
+ewkAAAQqIgIDfQkAAAQqHgJ7CgAABCoiAgN9CgAABCoeAnsLAAAEKiICA30LAAAEKh4CewwAAAQq
+IgIDfQwAAAQqHgJ7DQAABCoiAgN9DQAABCoeAnsOAAAEKiICA30OAAAEKh4Cew8AAAQqIgIDfQ8A
+AAQqHgJ7EAAABCoiAgN9EAAABCoeAiglAAAKKq5+EQAABC0ecsYAAHDQCAAAAigqAAAKbysAAApz
+LAAACoARAAAEfhEAAAQqGn4SAAAEKh4CgBIAAAQqGn4TAAAEKh4CKC0AAAoqLnNDAAAGgBMAAAQq
+AAAAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAAEAwAACN+AAB8DAAAuAsAACNT
+dHJpbmdzAAAAADQYAAA4AQAAI1VTAGwZAAAQAAAAI0dVSUQAAAB8GQAAGAIAACNCbG9iAAAAAAAA
+AAIAAAFXFaIJCQkAAAD6ATMAFgAAAQAAACkAAAAJAAAAEwAAAEQAAAArAAAALQAAADEAAAACAAAA
+BQAAACUAAAAxAAAAAgAAAAEAAAAHAAAAAQAAAAEAAAAAACAGAQAAAAAABgD6BLAJBgCOBbAJBgBG
+BJ0JDwAkCgAABgBzBPgHBgDdBPgHBgC+BPgHBgB1BfgHBgAaBfgHBgAzBfgHBgCKBPgHBgClBNUF
+CgBOBXkDBgBvALoAOwB7CQAACgDbCHkDDgDMCHkDCgBfCHkDBgBwA4gHCgAmC3kDBgDmCogHEgBW
+ABIJBgAOBLAJBgApBJ0JBgDsCNAJBgBTCMMHFgD5AwoGFgBaBAoGFgDHA64HBgBQA5EAGgBjCdgH
+BgAgA4gHBgA5CIgHBgB2AIgHBgCbB4gHHgABADoJHgAaADoJHgA9ADoJBgCaA4gHBgAsA4gHBgCs
+C/gHAAAAAHwAAAAAAAEAAQABABAAowcAABAAAQABAAEAEAC+CAAAQQABAAUAAQAQAAgLAABRAAEA
+HwABABAAsAoAAFUABAAkAAEAEABiCgAAVQAFACYAAAAQAAQG/AJVAAYAJwAAABAA1wkzClUAEQA+
+AAABEACRCjMKdQATAEIABgCwCssABgBiCs8ABgC+CNMAAQAWC9cAAQAWC9cAAQDDAdsAAQDXAdsA
+AQDzAdsAAQArAtsAAQAPAtsAAQBkAtsAAQBGAtsAAQB9At4AAQCuAtsAAQDNAtsAAQCYAuEAEQCP
+B+UAEQC3A+kAEQDsAu0AUCAAAAAAxgCsBQYAAQBYIAAAAADGALcFBgABAGAgAAAAAMYA0goGAAEA
+nCEAAAAAhhiGCQYAAQCkIQAAAACGGIYJYAABAK8hAAAAAIYI8APxAAQAviEAAAAAhgjtBvcABQDV
+IQAAAACGCG0HAQAGAOQhAAAAAIYIFgf3AAcA+yEAAAAAhghJBwEACAAKIgAAAACGCP0G9wAJACEi
+AAAAAIYItQH3AAoAMCIAAAAAhgjYBvcACwBHIgAAAACGCGoBAQAMAFYiAAAAAIYIrQb3AA0AbSIA
+AAAAhgiHAQEADgB8IgAAAACGCMUG9wAPAJMiAAAAAIYILgEBABAAoiIAAAAAhgiCBvcAEQC5IgAA
+AACGCEsBAQASAMgiAAAAAIYImAb3ABMA3yIAAAAAhggQAQEAFADuIgAAAACGCGwG9wAVAAUjAAAA
+AIYI8gABABYAFSMAAAAAhghWBvcAFwAtIwAAAACGCNwAAQAYAD0jAAAAAIYISAb3ABkAVSMAAAAA
+hgChCwYAGgBdIwAAAACGAO0KBgAaAGUjAAAAAIYA8ApcABoAbSMAAAAAhhiGCQYAGgCNIwAAAADG
+AcQKBgAaAI8jAAAAAIEAkwEGABoArCMAAAAAxgCAC/wAGgCNIwAAAADGAdIKBgAeAAEkAAAAAIYY
+hgkIAR4AECQAAAAAhggqCJQAHwAxJAAAAACGGIYJCAEfAEAkAAAAAIYI1QAOASAASCQAAAAAhgjc
+AAEAIABRJAAAAACGCOMADgEhAFkkAAAAAIYI8gABACEAYiQAAAAAhggBAQ4BIgBqJAAAAACGCBAB
+AQAiAHMkAAAAAIYIPQEOASMAeyQAAAAAhghLAQEAIwCEJAAAAACGCB8BDgEkAIwkAAAAAIYILgEB
+ACQAlSQAAAAAhgh7AQ4BJQCdJAAAAACGCIcBAQAlAKYkAAAAAIYIWQEOASYAriQAAAAAhghqAQEA
+JgC3JAAAAACGCKcBXAAnAL8kAAAAAIYItQH3ACcAyCQAAAAAhgg3Bw4BKADQJAAAAACGCEkHAQAo
+ANkkAAAAAIYIWwcOASkA4SQAAAAAhghtBwEAKQDqJAAAAACGCOcDEgEqAPIkAAAAAIYI8APxACoA
++yQAAAAAhhiGCQYAKwD7JAAAAACDGIYJBgArAAMlAAAAAJMI6AgXASsALyUAAAAAkwifAxwBKwA2
+JQAAAACTCKsDIQErAD4lAAAAAJYI/AonASwARSUAAAAAhhiGCQYALABNJQAAAACRGIwJLAEsAAAA
+AQDhCAAAAgBsCgAAAwBtCAAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDD
+BQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAA
+AQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDKCgAAAgCTCQAAAwC8CgAABABt
+CAAAAQAsCwAAAQAsCwAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAA
+AQDDBQAAAQDDBQAAAQDDBQAAAQDDBQAAAQDDBQkAhgkBABEAhgkGABkAhgkKACkAhgkQADEAhgkQ
+ADkAhgkQAEEAhgkQAEkAhgkQAFEAhgkQAFkAhgkQAGEAhgkQAGkAhgkGALkAhgkGAMEAhgkGAOEA
+hgkVAKEArAUGAKEAtwUGALEA7wUnAPEAlQsrAPkAhgkGAPkAyQUwAAwAhgkGAAwAeAlHABQANgtX
+ABQAjAtcAAEB3wMGAIEAhglgAIEAfwdqAIEALwcBAAkBhgkQAIEAoQsGAIEA7QoGAIEA8ApcAKEA
+hgkGAKEAhQB0AKEAgAp7AKkAhgkGAKEAmwCBACEBCgiHACkBVQONADEB/AiUADkBPgOZADkBqAui
+AMkAhgmoAOkAhgkGAC4ACwBRAS4AEwBaAS4AGwB5AS4AIwCCAS4AKwCrAS4AMwCrAS4AOwCrAS4A
+QwCCAS4ASwCxAS4AUwCrAS4AWwDIAUMAYwASAsEAawASAuEAawASAgEBawASAgMBcwASAiEBawAS
+AkEBawASAmEBawASAoEBawASAqEBawASAsEBawASAuEBawASAgECawASAmECawASAmkEewB5AYkE
+ewB5AeAEawASAgAFawASAiAFawASAkAFawASAmAFawASAoAFawASAqAFawASAsAFawASAuAFawAS
+AgAGawASAiAGawASAkAGawASAmAGawASAoAGawASAqAGawASAsAGawASAuAGawASAgAHawASAiAH
+awASAkAHawASAmAHawASAoAHawASAhsAcAADAAEABQAXAAcAGAAIACMACQAlAAAA9AMwAQAA8QY1
+AQAAcQc5AQAAGgc1AQAATQc5AQAAAQc1AQAAuQE1AQAA3AY1AQAAbgE5AQAAsQY1AQAAiwE5AQAA
+yQY1AQAAMgE5AQAAhgY1AQAATwE5AQAAnAY1AQAAFAE5AQAAcAY1AQAA9gA5AQAAWgY1AQAAkAE5
+AQAAzgY1AQAALgg9AQAAkAE5AQAA9gA5AQAAFAE5AQAATwE5AQAAMgE5AQAAiwE5AQAAbgE5AQAA
+uQE1AQAATQc5AQAAcQc5AQAA9AMwAQAA7AhCAQAAvwNHAQAAAAtMAQEABgADAAEABwAFAAEACAAH
+AAEACQAJAAEACgALAAEACwANAAEADAAPAAEADQARAAEADgATAAEADwAVAAEAEAAXAAEAEQAZAAEA
+EgAbAAEAEwAdAAEAFAAfAAEAFQAhAAEAFgAjAAEAFwAlAAEAGAAnAAEAGQApAAEAGgArAAEAGwAt
+AAIAJQAvAAIAJwAxAAEAKAAxAAIAKQAzAAEAKgAzAAIAKwA1AAEALAA1AAIALQA3AAEALgA3AAIA
+LwA5AAEAMAA5AAIAMQA7AAEAMgA7AAIAMwA9AAEANAA9AAIANQA/AAEANgA/AAIANwBBAAEAOABB
+AAIAOQBDAAEAOgBDAAIAOwBFAAEAPABFAAIAPwBHAAIAQABJAAEAQQBJAAIAQgBLAEAAUAAEgAAA
+AQAAAAAAAAAAAAAAAAD8AgAABAAAAAAAAAAAAAAAsACxAAAAAAAOAAAAAAAAAAAAAAC5AEILAAAA
+AA4AAAAAAAAAAAAAALkAXwsAAAAADgAAAAAAAAAAAAAAuQB3CAAAAAAEAAAAAAAAAAAAAACwAIgH
+AAAAAAQAAAAAAAAAAAAAAMIAmgoAAAAADgAAAAAAAAAAAAAAuQCaCAAAAAAAAAAAAQAAAOEJAAAr
+ADcAAAAAAABJRFRTQ29tcG9uZW50TWV0YURhdGExMDAASURUU1J1bnRpbWVDb25uZWN0aW9uQ29s
+bGVjdGlvbjEwMABJRFRTUnVudGltZUNvbm5lY3Rpb24xMDAASURUU0Nvbm5lY3Rpb25NYW5hZ2Vy
+MTAwAExpc3RgMQBJbnQzMgA8TW9kdWxlPgBHZXRPdXRwdXRJRABTeXN0ZW0uSU8AZ2V0X0NvbXBv
+bmVudE1ldGFEYXRhAG1zY29ybGliAFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljAGdldF9JZABz
+ZXRfSWQAZ2V0X0hvbWVUZWFtSWQAc2V0X0hvbWVUZWFtSWQAZ2V0X0F3YXlUZWFtSWQAc2V0X0F3
+YXlUZWFtSWQAZ2V0X0xvY2F0aW9uSWQAc2V0X0xvY2F0aW9uSWQAZ2V0X01hbmFnZXJJZABzZXRf
+TWFuYWdlcklkAGdldF9Ub3VybmFtZW50SWQAc2V0X1RvdXJuYW1lbnRJZABnZXRfU3BvcnRJZABz
+ZXRfU3BvcnRJZABNYXJrT3V0cHV0c0ZpbmlzaGVkAGdldF9Jc1N0YXJ0ZWQAc2V0X0lzU3RhcnRl
+ZAA8SWQ+a19fQmFja2luZ0ZpZWxkADxIb21lVGVhbUlkPmtfX0JhY2tpbmdGaWVsZAA8QXdheVRl
+YW1JZD5rX19CYWNraW5nRmllbGQAPExvY2F0aW9uSWQ+a19fQmFja2luZ0ZpZWxkADxNYW5hZ2Vy
+SWQ+a19fQmFja2luZ0ZpZWxkADxUb3VybmFtZW50SWQ+a19fQmFja2luZ0ZpZWxkADxTcG9ydElk
+PmtfX0JhY2tpbmdGaWVsZAA8SXNTdGFydGVkPmtfX0JhY2tpbmdGaWVsZAA8RGF0ZT5rX19CYWNr
+aW5nRmllbGQAPFNjb3JlSG9tZVRlYW0+a19fQmFja2luZ0ZpZWxkADxTY29yZUF3YXlUZWFtPmtf
+X0JhY2tpbmdGaWVsZABkZWZhdWx0SW5zdGFuY2UAU0NfOGE0N2M1YzRmNWM3NDBkNWE3ZDUwYjRm
+MDk1NWQ2ZWUASURpc3Bvc2FibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUA
+RmlsZQBHZXRSdW50aW1lQ29ubmVjdGlvbkJ5TmFtZQBEYXRlVGltZQBNaWNyb3NvZnQuU3FsU2Vy
+dmVyLkR0cy5QaXBlbGluZQBUeXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3Vs
+dHVyZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBEaXNwb3NlAGdldF9EYXRlAHNldF9EYXRlAEVk
+aXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9u
+VXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRy
+aWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBU
+YXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFz
+c2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0
+ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJ
+U1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmli
+dXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUA
+dmFsdWUARGVzZXJpYWxpemUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBnZXRfQ29ubmVjdGlv
+blN0cmluZwBNYXRjaABTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfOGE0N2M1YzRmNWM3NDBkNWE3
+ZDUwYjRmMDk1NWQ2ZWUuZGxsAHNldF9JZF9Jc051bGwAc2V0X0hvbWVUZWFtSWRfSXNOdWxsAHNl
+dF9Bd2F5VGVhbUlkX0lzTnVsbABzZXRfTG9jYXRpb25JZF9Jc051bGwAc2V0X01hbmFnZXJJZF9J
+c051bGwAc2V0X1RvdXJuYW1lbnRJZF9Jc051bGwAc2V0X1Nwb3J0SWRfSXNOdWxsAHNldF9Jc1N0
+YXJ0ZWRfSXNOdWxsAHNldF9EYXRlX0lzTnVsbABzZXRfU2NvcmVIb21lVGVhbV9Jc051bGwAc2V0
+X1Njb3JlQXdheVRlYW1fSXNOdWxsAFNldE51bGwAZ2V0X1Njb3JlSG9tZVRlYW0Ac2V0X1Njb3Jl
+SG9tZVRlYW0AZ2V0X1Njb3JlQXdheVRlYW0Ac2V0X1Njb3JlQXdheVRlYW0Ac2V0X0l0ZW0AU3lz
+dGVtAHJlc291cmNlTWFuAEJvb2xlYW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBT
+eXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uV2ViLlNjcmlwdC5TZXJpYWxpemF0aW9uAFN5c3Rl
+bS5SZWZsZWN0aW9uAGdldF9SdW50aW1lQ29ubmVjdGlvbkNvbGxlY3Rpb24AZ2V0X0Nvbm5lY3Rp
+b24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91
+dHB1dE1hcABNaWNyb3NvZnQuU3FsU2VydmVyLkRUU1J1bnRpbWVXcmFwAE1pY3Jvc29mdC5TcWxT
+ZXJ2ZXIuRFRTUGlwZWxpbmVXcmFwAE91dHB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0
+QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIAZ2V0X0Nvbm5lY3Rpb25NYW5hZ2VyAE1pY3Jvc29m
+dC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUuV3JhcHBlcgBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5Q
+aXBlbGluZS5XcmFwcGVyAEphdmFTY3JpcHRTZXJpYWxpemVyAEdldEVudW1lcmF0b3IALmN0b3IA
+LmNjdG9yAE91dHB1dElEcwBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGls
+ZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNDXzhhNDdjNWM0ZjVjNzQwZDVhN2Q1MGI0ZjA5
+NTVkNmVlLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ184
+YTQ3YzVjNGY1Yzc0MGQ1YTdkNTBiNGYwOTU1ZDZlZS5Qcm9wZXJ0aWVzAFZhcmlhYmxlcwBCdWZm
+ZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGluZ3MAU3lzdGVtLldlYi5FeHRl
+bnNpb25zAENvbm5lY3Rpb25zAEJ1ZmZlcnMARmluaXNoT3V0cHV0cwBDcmVhdGVOZXdPdXRwdXRS
+b3dzAE9iamVjdABTZXRFbmRPZlJvd3NldABnZXRfRGVmYXVsdABVc2VyQ29tcG9uZW50AFBhcmVu
+dENvbXBvbmVudABTY3JpcHRDb21wb25lbnQAZ2V0X0N1cnJlbnQATWljcm9zb2Z0LlNxbFNlcnZl
+ci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABQcmltZU91dHB1dABN
+b3ZlTmV4dABSZWFkQWxsVGV4dABBZGRSb3cAZ2V0X0Fzc2VtYmx5AAAAAACAm0kAcwBOAHUAbABs
+ACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYA
+YQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABj
+AG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAEU8AdQB0AHAAdQB0ACAAMAAAFUMAbwBuAG4A
+ZQBjAHQAaQBvAG4AAHFTAEMAXwA4AGEANAA3AGMANQBjADQAZgA1AGMANwA0ADAAZAA1AGEANwBk
+ADUAMABiADQAZgAwADkANQA1AGQANgBlAGUALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMA
+bwB1AHIAYwBlAHMAAIrA/xSIJOhAucK2WzeDfGcABCABAQgDIAABBSABARERBCABAQ4FIAEBEW0L
+BwMOFRE9ARIcEhwDIAAOBAABDg4GMAEBHgAOCAoBFRI5ARIcBhUSOQESHAggABURPQETAAYVET0B
+EhwEIAATAAMgAAIJIAMBEkUdCBJJBSACAQgcAwcBCAYAAggSSQ4FIAEdCAgFIAASgJEFIAASgJUG
+IAESgJkOBCAAElkIAAESgJ0RgKEFIAASgKUHIAIBDhKApQi3elxWGTTgiQiJhF3NgIDMkQgxvzhW
+rTZONQMGEhQDBhIYAwYSDAMGElECBggCBgIDBhFNAwYSZQMGEmkDBhIkBSABARFNBCABAQILIAQB
+CB0IHRJFEkkFIAEBElEDIAAIBCAAEU0EAAASZQQAABJpBQABARJpBAAAEiQDAAABBCgAEU0DKAAC
+AygACAQoABJZBAgAEmUECAASaQQIABIkCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9u
+VGhyb3dzAQgBAAIAAAAAACgBACNTQ184YTQ3YzVjNGY1Yzc0MGQ1YTdkNTBiNGYwOTU1ZDZlZQAA
+BQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDE5AABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0
+LjUBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNQQBAAAAALQAAADO
+yu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZl
+cnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5
+MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFE
+UEFEULQAAADQQQAAAAAAAAAAAADqQQAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3EEAAAAAAAAA
+AAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAABABAA
+AAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWGAA
+AOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+
+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBh
+AHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAA
+sARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAwADAANABi
+ADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4AeQBOAGEA
+bQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMAQwBf
+ADgAYQA0ADcAYwA1AGMANABmADUAYwA3ADQAMABkADUAYQA3AGQANQAwAGIANABmADAAOQA1ADUA
+ZAA2AGUAZQAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAwAC4AMAAA
+AHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AOABhADQANwBjADUAYwA0AGYA
+NQBjADcANAAwAGQANQBhADcAZAA1ADAAYgA0AGYAMAA5ADUANQBkADYAZQBlAC4AZABsAGwAAABI
+ABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAgAEAA
+IAAgADIAMAAxADkAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAAAAAA
+AHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwA4AGEANAA3AGMA
+NQBjADQAZgA1AGMANwA0ADAAZAA1AGEANwBkADUAMABiADQAZgAwADkANQA1AGQANgBlAGUALgBk
+AGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8AOABhADQANwBjADUA
+YwA0AGYANQBjADcANAAwAGQANQBhADcAZAA1ADAAYgA0AGYAMAA5ADUANQBkADYAZQBlAAAANAAI
+AAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAABAEEA
+cwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAwAAAD8MQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_8a47c5c4f5c740d5a7d50b4f0955d6ee</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">C6</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Matches From JSON.Connections[Connection]"
+                  connectionManagerID="Package.ConnectionManagers[dataMatches.json]"
+                  connectionManagerRefId="Package.ConnectionManagers[dataMatches.json]"
+                  name="Connection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0]"
+                  hasSideEffects="true"
+                  name="Output 0">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[Date]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[ScoreAwayTeam]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[ScoreAwayTeam]"
+                      name="ScoreAwayTeam" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[ScoreHomeTeam]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[ScoreHomeTeam]"
+                      name="ScoreHomeTeam" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[IsStarted]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[IsStarted]"
+                      name="IsStarted" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[TournamentId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[TournamentId]"
+                      name="TournamentId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[SportId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[SportId]"
+                      name="SportId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[LocationId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[LocationId]"
+                      name="LocationId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[ManagerId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[ManagerId]"
+                      name="ManagerId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[AwayTeamId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[AwayTeamId]"
+                      name="AwayTeamId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[HomeTeamId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[HomeTeamId]"
+                      name="HomeTeamId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[Id]"
+                      name="Id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Matches Table in OLTP DB From CSV"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Matches]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[34.73.86.174.BookmakerOLTP.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[34.73.86.174.BookmakerOLTP.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[HomeTeamId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="HomeTeamId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[HomeTeamId]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[HomeTeamId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[AwayTeamId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AwayTeamId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[AwayTeamId]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[AwayTeamId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[ManagerId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ManagerId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[ManagerId]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[ManagerId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[LocationId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LocationId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[LocationId]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[LocationId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[SportId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SportId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[SportId]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[SportId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[TournamentId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TournamentId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[TournamentId]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[TournamentId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[IsStarted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="IsStarted"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[IsStarted]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[IsStarted]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[ScoreHomeTeam]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ScoreHomeTeam"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[ScoreHomeTeam]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[ScoreHomeTeam]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[ScoreAwayTeam]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ScoreAwayTeam"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[ScoreAwayTeam]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[ScoreAwayTeam]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[IdFromCsvFile]"
+                      lineageId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output].Columns[Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[HomeTeamId]"
+                      dataType="i4"
+                      name="HomeTeamId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[AwayTeamId]"
+                      dataType="i4"
+                      name="AwayTeamId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[ManagerId]"
+                      dataType="i4"
+                      name="ManagerId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[LocationId]"
+                      dataType="i4"
+                      name="LocationId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[SportId]"
+                      dataType="i4"
+                      name="SportId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[TournamentId]"
+                      dataType="i4"
+                      name="TournamentId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[IsStarted]"
+                      dataType="bool"
+                      name="IsStarted" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[ScoreHomeTeam]"
+                      dataType="i4"
+                      name="ScoreHomeTeam" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[ScoreAwayTeam]"
+                      dataType="i4"
+                      name="ScoreAwayTeam" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbTimeStamp2"
+                      name="Date"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[CreatedAt]"
+                      dataType="dbTimeStamp2"
+                      name="CreatedAt"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[IdFromCsvFile]"
+                      dataType="i4"
+                      name="IdFromCsvFile" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input].ExternalColumns[IdFromJsonFile]"
+                      dataType="i4"
+                      name="IdFromJsonFile" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Matches Table in OLTP DB From JSON"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Matches]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[34.73.86.174.BookmakerOLTP.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[34.73.86.174.BookmakerOLTP.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[HomeTeamId]"
+                      cachedDataType="i4"
+                      cachedName="HomeTeamId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[HomeTeamId]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[HomeTeamId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[AwayTeamId]"
+                      cachedDataType="i4"
+                      cachedName="AwayTeamId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[AwayTeamId]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[AwayTeamId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[ManagerId]"
+                      cachedDataType="i4"
+                      cachedName="ManagerId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[ManagerId]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[ManagerId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[LocationId]"
+                      cachedDataType="i4"
+                      cachedName="LocationId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[LocationId]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[LocationId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[SportId]"
+                      cachedDataType="i4"
+                      cachedName="SportId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[SportId]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[SportId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[TournamentId]"
+                      cachedDataType="i4"
+                      cachedName="TournamentId"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[TournamentId]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[TournamentId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[IsStarted]"
+                      cachedDataType="bool"
+                      cachedName="IsStarted"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[IsStarted]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[IsStarted]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[ScoreHomeTeam]"
+                      cachedDataType="i4"
+                      cachedName="ScoreHomeTeam"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[ScoreHomeTeam]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[ScoreHomeTeam]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[ScoreAwayTeam]"
+                      cachedDataType="i4"
+                      cachedName="ScoreAwayTeam"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[ScoreAwayTeam]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[ScoreAwayTeam]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[IdFromJsonFile]"
+                      lineageId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0].Columns[Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[HomeTeamId]"
+                      dataType="i4"
+                      name="HomeTeamId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[AwayTeamId]"
+                      dataType="i4"
+                      name="AwayTeamId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[ManagerId]"
+                      dataType="i4"
+                      name="ManagerId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[LocationId]"
+                      dataType="i4"
+                      name="LocationId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[SportId]"
+                      dataType="i4"
+                      name="SportId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[TournamentId]"
+                      dataType="i4"
+                      name="TournamentId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[IsStarted]"
+                      dataType="bool"
+                      name="IsStarted" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[ScoreHomeTeam]"
+                      dataType="i4"
+                      name="ScoreHomeTeam" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[ScoreAwayTeam]"
+                      dataType="i4"
+                      name="ScoreAwayTeam" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbTimeStamp2"
+                      name="Date"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[CreatedAt]"
+                      dataType="dbTimeStamp2"
+                      name="CreatedAt"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[IdFromCsvFile]"
+                      dataType="i4"
+                      name="IdFromCsvFile" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input].ExternalColumns[IdFromJsonFile]"
+                      dataType="i4"
+                      name="IdFromJsonFile" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Case 1]"
+              endId="Package\Data Flow Task\Matches Table in OLTP DB From JSON.Inputs[OLE DB Destination Input]"
+              name="Case 1"
+              startId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Outputs[Case 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Case 11]"
+              endId="Package\Data Flow Task\Matches Table in OLTP DB From CSV.Inputs[OLE DB Destination Input]"
+              name="Case 1"
+              startId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Outputs[Case 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Conditional Split WHERE id new CSV.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Matches From CSV.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output 0]"
+              endId="Package\Data Flow Task\Conditional Split WHERE id new JSON.Inputs[Conditional Split Input]"
+              name="Output 0"
+              startId="Package\Data Flow Task\Matches From JSON.Outputs[Output 0]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Last Index CSV in DB"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{84DDA891-A5D6-4598-88AD-DBD3BFA4445B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Last Index CSV in DB"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8C3BB5D7-A6E7-485D-9905-51CDDB3DF7FE}"
+          SQLTask:SqlStatementSource="DECLARE @LastIdCsv  INT = 0&#xA;SELECT TOP 1 @LastIdCsv = IdFromCsvFile FROM [BookmakerOLTP].[dbo].[Matches] WHERE IdFromCsvFile IS NOT NULL ORDER BY Id DESC&#xA;SELECT @LastIdCsv AS LastIdCsv"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="LastIdCsv"
+            SQLTask:DtsVariableName="User::LastIdCsv" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Last Index JSON in DB"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{94b464e6-c94b-48bd-8472-bef3484ff676}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Last Index JSON in DB"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8C3BB5D7-A6E7-485D-9905-51CDDB3DF7FE}"
+          SQLTask:SqlStatementSource="DECLARE @LastIdJson INT = 0&#xA;SELECT TOP 1 @LastIdJson = IdFromJsonFile FROM [BookmakerOLTP].[dbo].[Matches] WHERE IdFromJsonFile IS NOT NULL ORDER BY Id DESC&#xA;SELECT @LastIdJson AS LastIdJson"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="LastIdJson"
+            SQLTask:DtsVariableName="User::LastIdJson" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{66432506-B11B-478A-8097-B552654D2F2C}"
+      DTS:From="Package\Get Last Index CSV in DB"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{97A166C5-91FF-4236-9B95-A067987375B9}"
+      DTS:From="Package\Get Last Index JSON in DB"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="553,234" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Get Last Index CSV in DB"
+          TopLeft="393,43" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="492.5,85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136,149"
+              Start="0,0"
+              End="136,141.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,70.5"
+                    Point2="0,74.5"
+                    Point3="4,74.5" />
+                  <mssgle:LineSegment
+                    End="132,74.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="132,74.5"
+                    Point2="136,74.5"
+                    Point3="136,78.5" />
+                  <mssgle:LineSegment
+                    End="136,141.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Get Last Index JSON in DB"
+          TopLeft="687,38" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="789.5,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-137.166666666667,154"
+              Start="0,0"
+              End="-137.166666666667,146.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.4311926605505" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,87.4311926605505"
+                    Point2="0,91.4311926605505"
+                    Point3="-4,91.4311926605505" />
+                  <mssgle:LineSegment
+                    End="-133.166666666667,91.4311926605505" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-133.166666666667,91.4311926605505"
+                    Point2="-137.166666666667,91.4311926605505"
+                    Point3="-137.166666666667,95.4311926605505" />
+                  <mssgle:LineSegment
+                    End="-137.166666666667,146.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="253,42"
+          Id="Package\Data Flow Task\Matches Table in OLTP DB From CSV"
+          TopLeft="54,378" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Data Flow Task\Matches From CSV"
+          TopLeft="149,152" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Data Flow Task\Matches From JSON"
+          TopLeft="572,154" />
+        <NodeLayout
+          Size="259,42"
+          Id="Package\Data Flow Task\Matches Table in OLTP DB From JSON"
+          TopLeft="489,371" />
+        <NodeLayout
+          Size="250,42"
+          Id="Package\Data Flow Task\Conditional Split WHERE id new CSV"
+          TopLeft="104,266" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="230.75,194">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72"
+              Start="0,0"
+              End="0,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="256,42"
+          Id="Package\Data Flow Task\Conditional Split WHERE id new JSON"
+          TopLeft="529,265" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="658,196">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69"
+              Start="0,0"
+              End="0,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Case 1]"
+          TopLeft="657,307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-38.5,64"
+              Start="0,0"
+              End="-38.5,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="-4,32" />
+                  <mssgle:LineSegment
+                    End="-34.5,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.5,32"
+                    Point2="-38.5,32"
+                    Point3="-38.5,36" />
+                  <mssgle:LineSegment
+                    End="-38.5,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-34.4680859375,37,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Case 11]"
+          TopLeft="229,308">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-48.5,70"
+              Start="0,0"
+              End="-48.5,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31"
+                    Point2="0,35"
+                    Point3="-4,35" />
+                  <mssgle:LineSegment
+                    End="-44.5,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-44.5,35"
+                    Point2="-48.5,35"
+                    Point3="-48.5,39" />
+                  <mssgle:LineSegment
+                    End="-48.5,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-39.4680859375,40,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Matches Table in OLTP DB From CSV">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Matches Table in OLTP DB From JSON">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

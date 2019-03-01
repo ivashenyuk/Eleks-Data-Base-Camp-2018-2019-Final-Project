@@ -1,0 +1,29 @@
+﻿CREATE PROCEDURE [dbo].[BetGet]
+	@BetId INT = NULL
+AS
+BEGIN
+	SET NOCOUNT ON
+    SET XACT_ABORT ON
+
+	BEGIN TRAN
+		BEGIN TRY
+			IF (@BetId IS NULL)
+			BEGIN
+				SELECT * FROM [dbo].[Bets]
+			END
+			ELSE
+			BEGIN
+				SELECT TOP 1 * FROM [dbo].[Bets] WHERE [Id] = @BetId
+			END
+			COMMIT
+		END TRY
+		BEGIN CATCH
+			IF (@@ERROR <> 0)
+			BEGIN 
+				ROLLBACK
+				;THROW
+			END
+			RETURN NULL
+		END CATCH
+
+END

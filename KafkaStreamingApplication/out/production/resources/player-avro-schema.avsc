@@ -1,0 +1,27 @@
+{
+   "type":"record",
+   "name":"Player",
+   "namespace":"Entities",
+   "fields":[
+      {
+         "name":"id",
+         "type":"int"
+      },
+      {
+         "name":"card",
+         "type":"string"
+      },
+      {
+         "name":"name",
+         "type":"string"
+      },
+      {
+         "name":"teamName",
+         "type":"string"
+      },
+      {
+         "name":"count",
+         "type":"long"
+      }
+   ]
+}

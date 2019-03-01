@@ -1,0 +1,5 @@
+E:\Eleks\Final Project\BookmakerDW\BookmakerDW\bin\Debug\BookmakerDW.dacpac
+E:\Eleks\Final Project\BookmakerDW\BookmakerDW\bin\Debug\BookmakerDW.dll
+E:\Eleks\Final Project\BookmakerDW\BookmakerDW\bin\Debug\BookmakerDW.pdb
+E:\Eleks\Final Project\BookmakerDW\BookmakerDW\obj\Debug\BookmakerDW.dll
+E:\Eleks\Final Project\BookmakerDW\BookmakerDW\obj\Debug\BookmakerDW.pdb

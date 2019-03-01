@@ -1,0 +1,56 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[FactFinance]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[FactFinance].[DateId] on table [dbo].[FactFinance] must be added, but the column has no default value
+         and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[FactFinance].[MatchId] on table [dbo].[FactFinance] must be added, but the column has no default value
+         and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[FactFinance].[Profit] on table [dbo].[FactFinance] must be added, but the column has no default value
+         and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[FactFinance].[Tax] on table [dbo].[FactFinance] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[FactFinance].[UserId] on table [dbo].[FactFinance] must be added, but the column has no default value
+         and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+
+** User actions
+     Table rebuild
+       [dbo].[FactFinance] (Table)
+     Create
+       [dbo].[DimDate] (Table)
+       [dbo].[DimLocation] (Table)
+       [dbo].[DimMatch] (Table)
+       [dbo].[DimSport] (Table)
+       [dbo].[DimTournament] (Table)
+       [dbo].[DimUser] (Table)
+       [dbo].[DF_Created_At_DimLocation] (Default Constraint)
+       [dbo].[DF_Created_At_DimSport] (Default Constraint)
+       [dbo].[DF_Created_At_DimTournament] (Default Constraint)
+       [dbo].[FK_Match_FactFinance_Events] (Foreign Key)
+       [dbo].[FK_User_FactFinance_Users] (Foreign Key)
+       [dbo].[FK_Date_FactFinance_DimDate] (Foreign Key)
+       [dbo].[CK_User_Age_DimUser] (Check Constraint)
+       [dbo].[FillDimDate] (Procedure)
+
+** Supporting actions
+
+The column [dbo].[FactFinance].[DateId] on table [dbo].[FactFinance] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[FactFinance].[MatchId] on table [dbo].[FactFinance] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[FactFinance].[Profit] on table [dbo].[FactFinance] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[FactFinance].[Tax] on table [dbo].[FactFinance] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[FactFinance].[UserId] on table [dbo].[FactFinance] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

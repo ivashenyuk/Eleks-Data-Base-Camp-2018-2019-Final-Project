@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[Users] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_Purse_Users_Purses] (Foreign Key)
+     Create
+       [dbo].[FK_Purse_Users_Purses] (Foreign Key)
+     Refresh
+       [dbo].[UserRegistration] (Procedure)

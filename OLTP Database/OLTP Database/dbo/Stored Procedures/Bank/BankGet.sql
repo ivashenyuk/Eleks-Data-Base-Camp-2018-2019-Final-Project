@@ -1,0 +1,29 @@
+﻿CREATE PROCEDURE [dbo].[BankGet]
+	@BankId INT = NULL
+AS
+BEGIN
+	SET NOCOUNT ON
+    SET XACT_ABORT ON
+
+	BEGIN TRAN
+		BEGIN TRY
+			IF (@BankId IS NULL)
+			BEGIN
+				SELECT * FROM [dbo].[Banks]
+			END
+			ELSE
+			BEGIN
+				SELECT TOP 1 * FROM [dbo].[Banks] WHERE [Id] = @BankId
+			END
+			COMMIT
+		END TRY
+		BEGIN CATCH
+			IF (@@ERROR <> 0)
+			BEGIN 
+				ROLLBACK
+				;THROW
+			END
+			RETURN NULL
+		END CATCH
+
+END

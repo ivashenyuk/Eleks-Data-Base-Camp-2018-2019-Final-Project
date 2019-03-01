@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Teams]
+(
+	[Id] INT NOT NULL CONSTRAINT PK_Team_Id PRIMARY KEY IDENTITY(1,1)
+	,[ClubId] INT NULL CONSTRAINT FK_Club_Id_Teams_Clubs FOREIGN KEY REFERENCES [dbo].[Clubs]([Id])
+	,[TeamManagerId] INT NULL CONSTRAINT FK_Team_Manager_Id_Teams_Users FOREIGN KEY REFERENCES [dbo].[Users]([Id])
+	,[Name] NVARCHAR(255) NOT NULL
+	,[CreatedAt] DATETIME2 NOT NULL CONSTRAINT DF_Created_At_Teams DEFAULT GETDATE()
+)

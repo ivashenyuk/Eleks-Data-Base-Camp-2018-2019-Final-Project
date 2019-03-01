@@ -1,0 +1,23 @@
+﻿CREATE PROCEDURE [dbo].[RoleRemove]
+	@RoleId INT
+AS
+BEGIN
+	SET NOCOUNT ON
+    SET XACT_ABORT ON
+
+	BEGIN TRAN
+		BEGIN TRY
+			DELETE FROM [dbo].[Roles] WHERE [Id] = @RoleId
+			COMMIT
+			RETURN 1
+		END TRY
+		BEGIN CATCH
+			IF (@@ERROR <> 0)
+			BEGIN 
+				ROLLBACK
+				;THROW
+			END
+			RETURN 0
+		END CATCH
+	
+END
